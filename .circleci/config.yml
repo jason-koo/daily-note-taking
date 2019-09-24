@@ -33,7 +33,7 @@ jobs: # 'jobs' is a parent-level dictionary of YAML and each mapping underneath 
 
     - run: wget https://github.com/jgm/pandoc/releases/download/1.19.1/pandoc-1.19.1-1-amd64.deb # Getting and downloading file
     - run: sudo dpkg -i pandoc-1.19.1-1-amd64.deb
-    - run: bundle exec ruby render.rb
+    - run: bundle exec ruby render.rb #Ruby file
     - save_cache:
         key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
         paths:
